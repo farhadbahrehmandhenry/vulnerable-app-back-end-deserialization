@@ -14,7 +14,6 @@ def addBad():
   serialized = b64encode(pickle.dumps(user))
   pickle.dump(user, open('track_file','wb'))
   deserialized = pickle.load(open('track_file','rb'))
-  print(user, deserialized)
 
   return {'serialized': str(serialized), 'deserialized': deserialized}
 
